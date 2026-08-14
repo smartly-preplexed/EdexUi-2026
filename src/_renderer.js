@@ -670,7 +670,7 @@ async function initUI() {
     window.onmouseup = e => {
         if (window.keyboard.linkedToTerm) window.term[window.currentTerm].term.focus();
     };
-    window.term[0].term.writeln("\033[1m"+`Welcome to EdexUi-2026 v${electron.remote.app.getVersion()} - Electron v${process.versions.electron}`+"\033[0m");
+    window.term[0].term.writeln("\x1b[1m"+`Welcome to EdexUi-2026 v${electron.remote.app.getVersion()} - Electron v${process.versions.electron}`+"\x1b[0m");
 
     await _delay(100);
 
